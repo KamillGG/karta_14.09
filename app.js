@@ -12,29 +12,17 @@ function zdj(id){
 }
 function pzdr(){
     const numer = document.getElementById("numerki").value
-    document.getElementById("cardNumber").innerHTML = numer
-
     const textValue = document.getElementById('cardNumber')
-    const tekst =textValue.textContent
-    console.log(tekst)
-    let nowyTekst = ''
-    if(textValue.length<=13){
-        if(tekst.length<=13){
-            for (let i = 0; i < tekst.length; i++) {
-               
-                nowyTekst += tekst[i];
-                
-                if ((i + 1) % 3 === 0 && i !== tekst.length - 1) {
-                    if(nowyTekst.length<=13){
-                    nowyTekst += ' ';}
-                }
-                
-              
-            }
-            }
-            textValue.textContent = nowyTekst;
+    textValue.innerHTML = numer
+    var newStr= ''
+    for(let i=0;i<=numer.length-1;i++){
+        newStr += numer[i]
+        if((i+1)%4==0){
+            newStr+=" "
+        }
+    }
+    textValue.innerHTML = newStr
 
-}
 }
 
 function imie(){
