@@ -1,0 +1,26 @@
+body{
+    display: grid;
+    grid-template-areas: "main""control";
+    grid-template-columns: 100%;
+    grid-template-rows: 80vh 20vh;
+    margin: 0;
+}
+#main{
+    grid-area: main;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+#control{
+    grid-area: control;
+}
+#card{
+    border: black 2px solid;
+    height: 300px;
+    width: 480px;
+    z-index: -2;
+}
+#child{
+    position: absolute;
+}
