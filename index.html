@@ -9,6 +9,9 @@
 </head>
 <body>
     <div id="main">
+        <div id="back">
+            <img src="mountains.jpg" id="backIMG" width="480px" height="300px">
+        </div>
         <div id="tilt">
           
             <div id="card">
@@ -28,22 +31,17 @@
         </div>
     </div>
     <div id="control">
-        <h3 id="tlo">Wybierz tlo
-            <div>
-                <input type="radio" id="1" name="image" value="1" onchange="zdj(id)" checked>
-            <label for="1">1</label>
-            </div>
-            <div>
-                <input type="radio" id="2" name="image" value="2" onchange="zdj(id)">
-            <label for="2">2</label>
-            </div>
-            <div>
-                <input type="radio" id="3" name="image" value="3" onchange="zdj(id)">
-            <label for="3">3</label>
+        <h3 id="tlo">
+            <div><h2>Wybierz tlo</h2></div>
+            <div id="parentChoose">
+                <img src="mountains.jpg" id="1" onclick="zdj(id)" class="chosing">
+            <img src="2.avif" id="2" onclick="zdj(id)" class="chosing">
+            <img src="angryBirds.jpg" id="3" onclick="zdj(id)" class="chosing">
             </div>
             
+            
         </h3>
-        <div>
+        <div id="inputs">
             <div>
                 <h3>Wpisz numer</h3>
                 <input type="text" id="numerki" onkeyup="pzdr()" maxlength="16">

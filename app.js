@@ -10,14 +10,17 @@ function zdj(id){
         },700)
         if(id==1){
             document.getElementById('ajemdzi').src="mountains.jpg"
+            document.getElementById('backIMG').src="mountains.jpg"
             document.getElementById('child').style.color = "white"
         }
         else if(id==2){
             document.getElementById('ajemdzi').src="2.avif"
+            document.getElementById('backIMG').src="2.avif"
             document.getElementById('child').style.color = "white"
         }
         else{
             document.getElementById('ajemdzi').src="angryBirds.jpg"
+            document.getElementById('backIMG').src="angryBirds.jpg"
             document.getElementById('child').style.color = "black"
         }
     },700)
@@ -116,11 +119,34 @@ el.addEventListener('mouseout', function() {
 })
 
 /* Add listener for mousedown event, to simulate click */
-el.addEventListener('mousedown', function() {
-  el.style.transform = 'perspective(500px) scale(0.9) rotateX(0) rotateY(0)'
-})
+// el.addEventListener('mousedown', function() {
+//   el.style.transform = 'perspective(500px) scale(0.9) rotateX(0) rotateY(0)'
+// })
 
-/* Add listener for mouseup, simulate release of mouse click */
-el.addEventListener('mouseup', function() {
-  el.style.transform = 'perspective(500px) scale(1.1) rotateX(0) rotateY(0)'
+// /* Add listener for mouseup, simulate release of mouse click */
+// el.addEventListener('mouseup', function() {
+//   el.style.transform = 'perspective(500px) scale(1.1) rotateX(0) rotateY(0)'
+// })
+document.getElementById('tilt').addEventListener('mousedown',()=>{
+    document.getElementById('tilt').classList.remove('slit-in-vertical')
+    document.getElementById('tilt').classList.add('slit-out-vertical')
+    setTimeout(()=>{
+        document.getElementById('back').classList.add('slit-in-vertical')
+    document.getElementById('back').style.zIndex = "20"
+    },450)
+})
+document.getElementById('back').addEventListener('mouseup',()=>{
+    console.log('ok')
+    
+    document.getElementById('back').classList.remove('slit-in-vertical')
+    document.getElementById('back').classList.add('slit-out-vertical')
+    setTimeout(()=>{
+        
+    document.getElementById('tilt').classList.remove('slit-out-vertical')
+        document.getElementById('tilt').classList.add('slit-in-vertical')
+    document.getElementById('back').style.zIndex = "-20"
+    setTimeout(()=>{
+        document.getElementById('tilt').classList.remove('slit-in-vertical')
+    },450)
+    },450)
 })
