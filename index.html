@@ -4,30 +4,64 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="anim.css">
     <title>Document</title>
 </head>
 <body>
     <div id="main">
-        <div id="card">
-            <div id="child">
-                <h2 id="cardNumber"></h2>
-                <h3 id="imieh3"></h3>
-                <h3 id="dejtah3"></h3>
+        <div id="tilt">
+          
+            <div id="card">
+                <div id="child">
+                    <div><img id="logo" src="visa.png"></div>
+                    
+                    <div id="numberCont">
+                        <h2 id="cardNumber">XXX XXX XXX XXX XXXX</h2>
+                    </div>
+                    <div><h3 id="imieh3">Name</h3></div>
+                    <div><h3 id="dejtah3">XX/XX</h3></div>
+                    
+                </div>
+                
+                <img width="480px" height="300px" id="ajemdzi" src="mountains.jpg">
             </div>
-            
-            <img width="480px" height="300px" id="ajemdzi">
         </div>
     </div>
     <div id="control">
-        <input type="text" id="numerki" onkeyup="pzdr()" maxlength="16">
-        <input type="text" id="imie" onkeyup="imie()">
-        <input type="date" onchange="dejta()" id="dataw">
-        <input type="radio" id="1" name="image" value="1" onchange="zdj(id)">
-        <label for="1">1</label>
-        <input type="radio" id="2" name="image" value="2" onchange="zdj(id)">
-        <label for="2">2</label>
-        <input type="radio" id="3" name="image" value="3" onchange="zdj(id)">
-        <label for="3">3</label>
+        <h3 id="tlo">Wybierz tlo
+            <div>
+                <input type="radio" id="1" name="image" value="1" onchange="zdj(id)" checked>
+            <label for="1">1</label>
+            </div>
+            <div>
+                <input type="radio" id="2" name="image" value="2" onchange="zdj(id)">
+            <label for="2">2</label>
+            </div>
+            <div>
+                <input type="radio" id="3" name="image" value="3" onchange="zdj(id)">
+            <label for="3">3</label>
+            </div>
+            
+        </h3>
+        <div>
+            <div>
+                <h3>Wpisz numer</h3>
+                <input type="text" id="numerki" onkeyup="pzdr()" maxlength="16">
+            </div>
+            <div>
+                <h3>Wpisz imie</h3>
+                <input type="text" id="imie" onkeyup="imie()">
+            </div>
+            <div>
+                <h3>Wybierz date</h3>
+                <input type="month" onchange="dejta()" id="dataw">
+            </div>
+            
+            
+            
+        </div>
+        
+        
         
     </div>
     <script src="app.js"></script>

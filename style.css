@@ -13,6 +13,10 @@ body{
     position: relative;
 }
 #control{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-areas: "one two";
+    border-top: 3px solid black;
     grid-area: control;
 }
 #card{
@@ -23,4 +27,46 @@ body{
 }
 #child{
     position: absolute;
+    height: 300px;
+    width: 480px;
+    color: white;
+}
+#tilt {
+    display: block;
+    margin: 0 auto;
+    transition: box-shadow 0.1s, transform 0.1s;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+  
+  #tilt:hover {
+    box-shadow: 0px 0px 30px rgba(0,0,0, 0.6);
+    cursor: pointer;
+  }
+#numberCont{
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#dejtah3{
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+}
+#imieh3{
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+}
+#tlo{
+    display: flex;
+    flex-direction: column;
+}
+#logo{
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    width: 80px;
+    height: 30px;
 }
