@@ -23,7 +23,7 @@ body{
     grid-area: control;
 }
 #card{
-    border: black 2px solid;
+    border: white 2px solid;
     height: 300px;
     width: 480px;
     z-index: -2;
